@@ -1,0 +1,27 @@
+/* global.scss */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Flexbox utility */
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
