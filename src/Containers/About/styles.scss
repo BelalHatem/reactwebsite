@@ -1,179 +1,132 @@
-/* About Page Container */
+/* About Page - Split Layout */
+
 .about-page {
-    background-color: #f4f7fa;
-    padding: 80px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+/* Left Side - White Background with Soft Gradient */
+.about-left {
+  width: 50%;
+  background: linear-gradient(to right, #ffffff, #f8f8f8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px;
+  text-align: left;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Header - Improved Typography */
+.about-header {
+  color: #000000;
+  font-size: 2.0rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+/* About Text Section */
+.about-text {
+  max-width: 90%;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.7;
+}
+
+/* About Details Section */
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Detail Cards (Education, Experience, Skills) */
+.about-box {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 90%;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Icons inside the cards */
+.about-box h3 {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+/* Right Side - Pixel Background */
+.about-right {
+  width: 50%;
+  background: url('../../images/background.gif') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Luffy Animation */
+.luffy-animation {
+  position: absolute;
+  bottom: 40px;
+  left: -150px;
+  animation: moveLuffy 7s linear infinite;
+}
+
+.luffy {
+  width: 130px;
+  height: auto;
+}
+
+/* Luffy Running Animation */
+@keyframes moveLuffy {
+  0% {
+    left: -200px;
+    opacity: 1;
+  }
+  100% {
+    left: 100vw;
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-left {
     width: 100%;
-    height: 100vh; /* Full screen height */
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    position: relative;
+    padding: 50px 40px;
   }
-  
-  /* Header Section */
-  .about-header {
-    color: #547cc7;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-  
-    p {
-      color: #666;
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
-  }
-  
-  /* Profile + Bio Section */
-  .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
+
+  .about-right {
     width: 100%;
-    flex-wrap: wrap;
+    height: 50vh;
   }
-  
-  /* Profile Image (Positioned below the navbar) */
-  .about-image {
-    position: absolute;
-    top: 120px; /* Position image below navbar (adjust as needed) */
-    right: 20px;
-    img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+
+  .about-box {
+    width: 100%;
   }
-  
-  .about-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  
-    h2 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center; /* Align text and emoji together */
-      justify-content: center; /* Center text and emoji together */
-    }
-  
-    h2 span {
-      margin-left: 10px; /* Add spacing between the emoji and the text */
-    }
-  
-    p {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.6;
-      margin: 0 auto;
-      text-align: center;
-    }
+
+  .luffy {
+    width: 100px;
   }
-  
-  /* Details Section (Boxes side by side) */
-  .about-details {
-    display: flex;
-    justify-content: space-between; /* Arrange boxes side by side */
-    gap: 30px;
-    margin-top: 40px;
-    text-align: left;
-    width: 100%; /* Ensure the details section spans full width */
-  
-    .about-box {
-      background-color: #fff;
-      padding: 20px;
-      width: 30%; /* Adjust width to fit boxes side by side */
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow */
-      transition: all 0.3s ease;
-      text-align: center;
-  
-      h3 {
-        font-size: 1.2rem;
-        color: #547cc7;
-        margin-bottom: 15px;
-      }
-  
-      p {
-        color: #666;
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-  
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Hover shadow */
-      }
-    }
-  }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 1200px) {
-    .about-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .about-image img {
-      width: 120px;
-      height: 120px;
-    }
-  
-    .about-text h2 {
-      font-size: 1.5rem;
-    }
-  
-    .about-details {
-      flex-direction: column;
-      gap: 20px;
-      width: 100%; /* Ensure it fills the screen */
-    }
-  
-    .about-box {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .about-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .about-image img {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .about-text h2 {
-      font-size: 1.3rem;
-    }
-  
-    .about-details {
-      flex-direction: column;
-      gap: 20px;
-      width: 100%; /* Ensure it fills the screen */
-    }
-  
-    .about-box {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-  
+}

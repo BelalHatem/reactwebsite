@@ -1,44 +1,66 @@
-  /* Navbar Styles */
-  .navbar {
-    background-color: #547cc7;
-    padding: 15px 0;
+/* Navbar Styles */
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+
+  li {
+    list-style: none;
     display: flex;
-    justify-content: flex-end; /* Move items to the right */
     align-items: center;
-    width: 100vw;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin-right: 40px; /* Push nav items away from the right edge */
-  
-      li {
-        list-style: none;
-  
-        .nav-item {
-          text-decoration: none;
-          color: white;
-          font-size: 16px;
-          font-weight: bold;
-          background-color: #547cc7;
-          border: none;
-          padding: 10px 15px;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-  
-          &:hover {
-            background-color: #ffffff;
-            color: #1a3a6f;
-          }
-        }
-      }
+    justify-content: center;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    padding: 29px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      background-color: lightgrey;
+      color: black;
     }
   }
-  
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-links {
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+}

@@ -1,4 +1,7 @@
 /* global.scss */
+@import url('https://fonts.googleapis.com/css?family=Roboto'); 
+$roboto-font: 'Roboto Light', sans-serif;
+
 
 /* Global Reset */
 * {
@@ -8,14 +11,15 @@
   }
   
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $roboto-font;
     background-color: #f8f8f8;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
   }
   
   /* Flexbox utility */
