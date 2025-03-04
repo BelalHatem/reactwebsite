@@ -1,12 +1,12 @@
 /* About Page - Split Layout */
-
 .about-page {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  width: 100%;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
 }
+
 /* Left Side - White Background with Soft Gradient */
 .about-left {
   width: 50%;
@@ -14,29 +14,35 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 60px;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5%;
+  min-height: 100vh;
 }
 
-/* About Header - Improved Typography */
+/* About Header */
 .about-header {
-  color: #000000;
-  font-size: 2.0rem;
+  color: #000;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  text-align: center;
+  padding-bottom: 5%;
 }
 
-
-/* About Text Section */
+/* About Text */
 .about-text {
   max-width: 90%;
+  text-align: center;
 }
 
 .about-text p {
-  font-size: 1.1rem;
-  color: #000000;
+  font-size: 1.2rem;
+  color: #000;
   line-height: 1.7;
+  padding: 2vh;
+  border-radius: 2vh;
+  background-color: lightblue;
 }
 
 /* About Details Section */
@@ -44,20 +50,21 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 5vh;
 }
 
-/* Detail Cards (Education, Experience, Skills) */
+/* Detail Cards */
 .about-box {
   background: white;
-  padding: 25px 35px;
-  border-radius: 20px;
+  padding: 20px;
+  border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 90%;
+  width: 100%;
+  text-align: left;
 }
 
 .about-box:hover {
@@ -65,38 +72,35 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Icons inside the cards */
-.about-box h3 {
-  font-size: 1.2rem;
-  color: #000000;
-  margin-bottom: 5px;
-}
-
 /* Right Side - Pixel Background */
 .about-right {
   width: 50%;
-  background: url('../../images/background.gif') no-repeat center center;
+  background: url('../../images/aboutBackground.gif') no-repeat center center;
   background-size: cover;
   position: relative;
+  min-height: 100vh;
 }
 
 /* Luffy Animation */
 .luffy-animation {
   position: absolute;
-  bottom: 40px;
+  bottom: 5vh;
   left: -150px;
   animation: moveLuffy 7s linear infinite;
 }
 
 .luffy {
-  width: 130px;
+  width: 120px;
   height: auto;
 }
 
-/* Luffy Running Animation */
+/* Running Animation */
 @keyframes moveLuffy {
   0% {
-    left: -200px;
+    left: 0px;
+    opacity: 0.5;
+  }
+  25% {
     opacity: 1;
   }
   100% {
@@ -105,28 +109,85 @@
   }
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* 📱 Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
   .about-page {
     flex-direction: column;
-    height: auto;
+  }
+
+  .about-left, .about-right {
+    width: 100%;
+    min-height: auto;
   }
 
   .about-left {
-    width: 100%;
-    padding: 50px 40px;
+    padding: 8%;
   }
 
   .about-right {
-    width: 100%;
     height: 50vh;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
   }
 
   .about-box {
     width: 100%;
+    padding: 15px;
   }
 
   .luffy {
     width: 100px;
+  }
+}
+
+/* 📱 iPhone-specific Adjustments */
+@media (max-width: 768px) {
+  .about-left {
+    padding: 5%;
+  }
+
+  .about-header {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    padding: 1.5vh;
+  }
+
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .luffy {
+    width: 90px;
+  }
+}
+
+/* 📱 Small Devices (iPhone SE, Foldable Phones) */
+@media (max-width: 480px) {
+  .about-left {
+    padding: 5%;
+  }
+
+  .about-header {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    padding: 1.2vh;
+  }
+
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .luffy {
+    width: 80px;
   }
 }

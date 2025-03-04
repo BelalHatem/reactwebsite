@@ -39,12 +39,13 @@ const About = () => {
       </div>
 
       {/* Right Side - Pixel Background */}
-      <div className="about-right"></div>
-
-      {/* Luffy Running Across the Screen */}
-      <div className="luffy-animation">
-        <img src={luffyGif} alt="Luffy Running" className="luffy" />
+      <div className="about-right">
+        {/* Luffy Running Across the Screen */}
+        <div className="luffy-animation">
+          <img src={luffyGif} alt="Luffy Running" className="luffy" />
+        </div>
       </div>
+
 
     </div>
   );
