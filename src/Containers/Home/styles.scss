@@ -30,15 +30,15 @@
     transform: translateY(-50%);
     color: white;
     text-align: left;
-    width: 650px; /* Fixed width */
+    width: 650px; 
     max-width: 1000px;
     height: auto;
-    background: rgba(40, 40, 40, 0.85); /* Darker background */
+    background: rgba(40, 40, 40, 0.85); 
     padding: 40px;
     border-radius: 10px;
 }
 
-/* Improve heading visibility */
+
 .home-content h1 {
     font-size: 3.5rem;
     font-weight: bold;
@@ -47,7 +47,6 @@
     margin-bottom: 15px;
     color: #ffffff;
 
-    /* Strong black text shadow for visibility */
     text-shadow: 
         -3px -3px 0px black, 
          3px -3px 0px black, 
@@ -65,7 +64,6 @@
     margin-bottom: 15px;
     color: #ffffff;
 
-    /* Strong black text shadow for better visibility */
     text-shadow: 
         -3px -3px 0px black, 
          3px -3px 0px black, 
@@ -74,13 +72,13 @@
          0px  0px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* Improve paragraph visibility */
+
 .home-content p {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #ffffff;
 
-    /* Black text border effect */
+
     text-shadow: 
         -2px -2px 0px black, 
          2px -2px 0px black, 
@@ -89,14 +87,14 @@
          0px  0px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Improve CV Button Visibility */
+
 .cv-button {
     display: inline-block;
     padding: 14px 28px;
     font-size: 1.2rem;
     font-weight: bold;
     color: white;
-    background-color: #165a0d; /* Green theme */
+    background-color: #165a0d; 
     text-decoration: none;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
