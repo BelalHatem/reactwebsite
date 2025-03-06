@@ -13,10 +13,10 @@ function App() {
       <NavBar/>
       {/*Main page content**/}
       <Routes>
-        <Route index path='/' element={<Home/>}/>
-        <Route index path='/about' element={<About/>}/>
-        <Route index path='/portfolio' element={<Portfolio/>}/>        \
-        <Route index path='/contact' element={<Contact/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/portfolio' element={<Portfolio/>}/>        \
+        <Route path='/contact' element={<Contact/>}/>
       </Routes>
     </div>
   );
