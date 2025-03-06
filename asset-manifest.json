@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/BelalHateem/reactwebsite/static/css/main.da82ace5.css",
-    "main.js": "/BelalHateem/reactwebsite/static/js/main.69475d32.js",
-    "static/media/homepageBackground.gif": "/BelalHateem/reactwebsite/static/media/homepageBackground.17e528211233b9179743.gif",
-    "static/media/contactBackground.gif": "/BelalHateem/reactwebsite/static/media/contactBackground.e697ba626a88287238b1.gif",
-    "static/media/BELALNEWCV.pdf": "/BelalHateem/reactwebsite/static/media/BELALNEWCV.55a0a73f75f7779be150.pdf",
-    "static/media/aboutBackground.gif": "/BelalHateem/reactwebsite/static/media/aboutBackground.6f9c1f02500ff0828286.gif",
-    "static/media/cropped-running.gif": "/BelalHateem/reactwebsite/static/media/cropped-running.fc265badece31833a428.gif",
-    "index.html": "/BelalHateem/reactwebsite/index.html",
-    "main.da82ace5.css.map": "/BelalHateem/reactwebsite/static/css/main.da82ace5.css.map",
-    "main.69475d32.js.map": "/BelalHateem/reactwebsite/static/js/main.69475d32.js.map"
+    "main.css": "/reactwebsite/static/css/main.7a91ee0b.css",
+    "main.js": "/reactwebsite/static/js/main.dd226057.js",
+    "static/media/homepageBackground.gif": "/reactwebsite/static/media/homepageBackground.17e528211233b9179743.gif",
+    "static/media/contactBackground.gif": "/reactwebsite/static/media/contactBackground.e697ba626a88287238b1.gif",
+    "static/media/BELALNEWCV.pdf": "/reactwebsite/static/media/BELALNEWCV.55a0a73f75f7779be150.pdf",
+    "static/media/aboutBackground.gif": "/reactwebsite/static/media/aboutBackground.6f9c1f02500ff0828286.gif",
+    "static/media/cropped-running.gif": "/reactwebsite/static/media/cropped-running.fc265badece31833a428.gif",
+    "index.html": "/reactwebsite/index.html",
+    "main.7a91ee0b.css.map": "/reactwebsite/static/css/main.7a91ee0b.css.map",
+    "main.dd226057.js.map": "/reactwebsite/static/js/main.dd226057.js.map"
   },
   "entrypoints": [
-    "static/css/main.da82ace5.css",
-    "static/js/main.69475d32.js"
+    "static/css/main.7a91ee0b.css",
+    "static/js/main.dd226057.js"
   ]
 }
