@@ -7,10 +7,10 @@ import "./styles.scss";
 
 
 const data = [
-  { label: "HOME", to: "/" },
-  { label: "ABOUT", to: "/about" },
-  { label: "PORTFOLIO", to: "/portfolio" },
-  { label: "CONTACT", to: "/contact" },
+  { label: "HOME", to: "/reactwebsite" },
+  { label: "ABOUT", to: "/reactwebsite/about" },
+  { label: "PORTFOLIO", to: "/reactwebsite/portfolio" },
+  { label: "CONTACT", to: "/reactwebsite/contact" },
 ];
 
 const NavBar = () => {
