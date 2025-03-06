@@ -9,6 +9,7 @@
 
 /* Left Side - White Background with Soft Gradient */
 .about-left {
+  animation: fadeIn 1s ease-in-out; 
   width: 50%;
   background: linear-gradient(to right, #ffffff, #f8f8f8);
   display: flex;

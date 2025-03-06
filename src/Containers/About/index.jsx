@@ -16,7 +16,8 @@ const About = () => {
           <p>
           Hi, I'm Belal, I am a recent graduate from the University of Auckland with a degree in Computer Systems Engineering. 
           Throughout my studies, I primarily worked with embedded systems, gaining hands-on experience in hardware-software integration.
-          I have worked on many projects that involved healthcare solutions as well as video games where you can find in my portfolio section.
+          I have worked on many projects in university where I was able to hone my skills in programming. You can find my personal projects in
+          the portfolio section.
           Along the way, I also explored front-end web development, as well as Java and Python applications. 
           Outside of tech, I'm passionate about anime and video games, and when I'm not coding, you'll probably find me on the court—basketball is my favorite sport.
           </p>

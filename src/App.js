@@ -3,7 +3,6 @@ import Home from './Containers/Home';
 import About from './Containers/About';
 import Portfolio from './Containers/Portfolio';
 import Contact from './Containers/Contact';
-import Skills from './Containers/Skills';
 import NavBar from './Components/NavBar';
 import "./global.scss"; 
 
@@ -16,9 +15,7 @@ function App() {
       <Routes>
         <Route index path='/' element={<Home/>}/>
         <Route index path='/about' element={<About/>}/>
-        <Route index path='/portfolio' element={<Portfolio/>}/>
-        <Route index path='/contact' element={<Contact/>}/>
-        <Route index path='/Skills' element={<Skills/>}/>
+        <Route index path='/portfolio' element={<Portfolio/>}/>        <Route index path='/contact' element={<Contact/>}/>
       </Routes>
     </div>
   );
