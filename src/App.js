@@ -13,10 +13,10 @@ function App() {
       <NavBar/>
       {/*Main page content**/}
       <Routes>
-        <Route index path='/reactwebsite' element={<Home/>}/>
-        <Route index path='/reactwebsite/about' element={<About/>}/>
-        <Route index path='/reactwebsite/portfolio' element={<Portfolio/>}/>        
-        <Route index path='/reactwebsite/contact' element={<Contact/>}/>
+        <Route index path='/' element={<Home/>}/>
+        <Route index path='/about' element={<About/>}/>
+        <Route index path='/portfolio' element={<Portfolio/>}/>        \
+        <Route index path='/contact' element={<Contact/>}/>
       </Routes>
     </div>
   );
