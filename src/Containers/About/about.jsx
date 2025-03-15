@@ -1,7 +1,13 @@
 import React from "react";
 import { Container, Typography, Box, Paper } from "@mui/material";
+import { motion } from "framer-motion"; 
 import luffyGif from "../../images/cropped-running.gif";
 import backgroundAbout from "../../images/aboutBackground.gif";
+
+const fadeInRightVariant = {
+  hidden: { opacity: 0, x: 0 }, 
+  visible: { opacity: 1, x: 20, transition: { duration: 1 } }, 
+};
 
 const About = () => {
   return (
@@ -9,7 +15,8 @@ const About = () => {
       sx={{
         display: "flex",
         width: "100%",
-        height: "100%",
+        height: "100vh", // Full screen height
+        overflow: "hidden",
       }}
     >
       {/* Left Side - Content Section (50% width) */}
@@ -26,31 +33,44 @@ const About = () => {
           bgcolor: "rgba(255, 255, 255, 0.95)",
         }}
       >
-        <Typography variant="h3" fontWeight="bold" gutterBottom>
-          About Me
-        </Typography>
-        <Typography variant="body" sx={{ lineHeight: 1.7, width: "75%", fontSize: 20}}>
-          Hi, I'm Belal, a recent Computer Systems Engineering graduate from the University of Auckland.
-          I have experience in embedded systems, front-end web development, and Python applications.
-          Outside of tech, I'm passionate about anime, video games, and basketball.
-        </Typography>
+        <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
+          <Typography variant="h3" fontWeight="bold" gutterBottom>
+            About Me
+          </Typography>
+        </motion.div>
+
+        <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
+          <Typography variant="body1" sx={{ lineHeight: 1.7, maxWidth: "75%", fontSize: 20, mx: "auto" }}>
+            Hi, I'm Belal, a recent Computer Systems Engineering graduate from the University of Auckland.
+            I have experience in embedded systems, front-end web development, and Python applications.
+            Outside of tech, I'm passionate about anime, video games, and basketball.
+          </Typography>
+        </motion.div>
 
         {/* About Details */}
         <Box sx={{ mt: 4 }}>
-          <Paper sx={{ p: 2, mb: 2}}>
-            <Typography variant="h6">🎓 Education</Typography>
-            <Typography>Bachelor Honours in Computer Systems Engineering - University Of Auckland</Typography>
-          </Paper>
-          <Paper sx={{ p: 2, mb: 2 }}>
-            <Typography variant="h6">💼 Experience</Typography>
-            <Typography>Experience in Retail and Hospitality</Typography>
-          </Paper>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6">🛠️ Skills</Typography>
-            <Typography>
-              C • C++ • Embedded C • VHDL • Java • SQL • React • JavaScript • SCSS • TailWind CSS • UI/UX
-            </Typography>
-          </Paper>
+          <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
+            <Paper sx={{ p: 2, mb: 2 }}>
+              <Typography variant="h6">🎓 Education</Typography>
+              <Typography>Bachelor Honours in Computer Systems Engineering - University Of Auckland</Typography>
+            </Paper>
+          </motion.div>
+
+          <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
+            <Paper sx={{ p: 2, mb: 2 }}>
+              <Typography variant="h6">💼 Experience</Typography>
+              <Typography>Experience in Retail and Hospitality</Typography>
+            </Paper>
+          </motion.div>
+
+          <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
+            <Paper sx={{ p: 2 }}>
+              <Typography variant="h6">🛠️ Skills</Typography>
+              <Typography>
+                C • C++ • Embedded C • VHDL • Java • SQL • React • JavaScript • SCSS • TailWind CSS • UI/UX
+              </Typography>
+            </Paper>
+          </motion.div>
         </Box>
       </Paper>
 
