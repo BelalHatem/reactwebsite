@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/reactwebsite/static/js/main.7e3433a2.js",
+    "main.js": "/reactwebsite/static/js/main.e0e5c4e8.js",
     "static/media/homepageBackground.gif": "/reactwebsite/static/media/homepageBackground.17e528211233b9179743.gif",
     "static/media/contactBackground.gif": "/reactwebsite/static/media/contactBackground.e697ba626a88287238b1.gif",
     "static/media/BELALNEWCV.pdf": "/reactwebsite/static/media/BELALNEWCV.55a0a73f75f7779be150.pdf",
     "static/media/aboutBackground.gif": "/reactwebsite/static/media/aboutBackground.6f9c1f02500ff0828286.gif",
     "static/media/cropped-running.gif": "/reactwebsite/static/media/cropped-running.fc265badece31833a428.gif",
     "index.html": "/reactwebsite/index.html",
-    "main.7e3433a2.js.map": "/reactwebsite/static/js/main.7e3433a2.js.map"
+    "main.e0e5c4e8.js.map": "/reactwebsite/static/js/main.e0e5c4e8.js.map"
   },
   "entrypoints": [
-    "static/js/main.7e3433a2.js"
+    "static/js/main.e0e5c4e8.js"
   ]
 }
