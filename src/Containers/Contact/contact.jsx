@@ -45,15 +45,16 @@ const Contact = () => {
     <Box
       sx={{
         width: "100%",
-        minHeight: `calc(100vh - ${navbarHeight}px)`, 
+        minHeight: `calc(100vh - ${navbarHeight}px)`,
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         backgroundImage: `url(${backgroundContact})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        padding: "5rem 1rem", 
-        marginTop: `${navbarHeight}px`, 
+        padding: "5rem 1rem",
+        marginTop: `${navbarHeight}px`,
       }}
     >
       <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}>
@@ -67,7 +68,12 @@ const Contact = () => {
             boxShadow: 3,
             textAlign: "center",
             bgcolor: "rgba(255, 255, 255, 0.9)",
-            margin: "0 auto", 
+            margin: "0 auto",
+            display: "flex", 
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            flexGrow: 1, 
           }}
         >
           <Typography variant="h4" fontWeight="bold" gutterBottom>
@@ -77,7 +83,7 @@ const Contact = () => {
             Send me a message below. Feel free to reach out with any questions!
           </Typography>
 
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} onSubmit={sendEmail} style={{ width: "100%" }}>
             <TextField fullWidth label="Your Name" name="from_name" required sx={{ mb: 2 }} />
             <TextField fullWidth label="Your Email" name="from_email" required sx={{ mb: 2 }} />
             {error && <Typography color="error">{error}</Typography>}
