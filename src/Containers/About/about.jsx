@@ -14,24 +14,28 @@ const About = () => {
     <Box
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         width: "100%",
-        height: "100%", // Full screen height
+        minHeight: "100vh", 
+        alignItems: "stretch", 
         overflow: "hidden",
+        padding: "2rem 0", 
       }}
     >
-      {/* Left Side - Content Section (50% width) */}
+      {/* Left Side - Content Section */}
       <Paper
         elevation={3}
         sx={{
-          width: "50%",
-          height: "100%",
+          flex: 1, 
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          p: 4,
+          p: { xs: 3, sm: 4 },
           bgcolor: "rgba(255, 255, 255, 0.95)",
+          height: "100%", 
+          minHeight: "100vh",
         }}
       >
         <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
@@ -41,7 +45,7 @@ const About = () => {
         </motion.div>
 
         <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
-          <Typography variant="body1" sx={{textAlign: "centre", lineHeight: 1.7, maxWidth: "75%", wordWrap: "break-word", fontSize: 20, mx: "auto" }}>
+          <Typography variant="body1" sx={{ lineHeight: 1.7, maxWidth: "80%", fontSize: 18, mx: "auto" }}>
             Hi, I'm Belal, a recent Computer Systems Engineering graduate from the University of Auckland.
             I have experience in embedded systems, front-end web development, and Python applications.
             Outside of tech, I'm passionate about anime, video games, and basketball.
@@ -49,7 +53,7 @@ const About = () => {
         </motion.div>
 
         {/* About Details */}
-        <Box sx={{ mt: 4 }}>
+        <Box sx={{ mt: 4, width: "80%", pb: 0 }}> 
           <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
             <Paper sx={{ p: 2, mb: 2 }}>
               <Typography variant="h6">🎓 Education</Typography>
@@ -78,13 +82,15 @@ const About = () => {
       {/* Right Side - Background & Animation */}
       <Box
         sx={{
-          width: "50%",
-          height: "100%",
+          flex: 1, 
+          minHeight: "100vh", 
+          display: "flex",
+          alignItems: "stretch", 
           position: "relative",
           backgroundImage: `url(${backgroundAbout})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          overflowX: "hidden",
+          overflow: "hidden",
         }}
       >
         {/* Running Luffy Animation */}
@@ -105,7 +111,7 @@ const About = () => {
         {`
           @keyframes moveLuffy {
             0% { left: 0%; opacity: 0.2; }
-            20% {left: 20%; opacity: 0.8;}
+            20% { left: 20%; opacity: 0.8; }
             100% { left: 100%; opacity: 1; }
           }
         `}

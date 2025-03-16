@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { TextField, Button, Typography, Paper, Box } from "@mui/material";
 import { motion } from "framer-motion";
@@ -43,29 +43,28 @@ const Contact = () => {
     <Box
       sx={{
         width: "100%",
-        height: "100%",
+        minHeight: "100vh", 
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         backgroundImage: `url(${backgroundContact})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        padding: "5rem 1rem", 
       }}
     >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
+      <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}>
         <Paper
           elevation={3}
           sx={{
-            maxWidth: "md",
-            p: 4,
+            maxWidth: "500px",
+            width: "100%",
+            p: { xs: 3, sm: 4 },
             borderRadius: 2,
             boxShadow: 3,
             textAlign: "center",
             bgcolor: "rgba(255, 255, 255, 0.9)",
+            margin: "0 auto", 
           }}
         >
           <Typography variant="h4" fontWeight="bold" gutterBottom>
