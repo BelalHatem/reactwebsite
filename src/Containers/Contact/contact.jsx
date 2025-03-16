@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { TextField, Button, Typography, Paper, Box } from "@mui/material";
+import { TextField, Button, Typography, Paper, Box, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import backgroundContact from "../../images/contactBackground.gif";
 
 const Contact = () => {
+  const theme = useTheme();
+  const navbarHeight = theme.mixins.toolbar.minHeight;
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -43,7 +45,7 @@ const Contact = () => {
     <Box
       sx={{
         width: "100%",
-        minHeight: "100vh", 
+        minHeight: `calc(100vh - ${navbarHeight}px)`, 
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -51,6 +53,7 @@ const Contact = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         padding: "5rem 1rem", 
+        marginTop: `${navbarHeight}px`, 
       }}
     >
       <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}>

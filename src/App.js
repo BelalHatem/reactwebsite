@@ -13,7 +13,6 @@ const theme = createTheme({
     secondary: { main: "#f50057" },
     background: { default: "#f8f8f8" },
     height: "100vh",
-    overflow: "hidden",
   },
   typography: {
     fontFamily: "Roboto, Arial, sans-serif",
@@ -38,7 +37,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Home />} />a
         </Routes>
       </Box>
     </ThemeProvider>

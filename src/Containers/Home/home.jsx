@@ -1,19 +1,22 @@
 import React from "react";
-import { Container, Typography, Button, Box } from "@mui/material";
-import { motion } from "framer-motion"; 
+import { Container, Typography, Button, Box, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 import cvFile from "../../images/BELALNEWCV.pdf";
 import backgroundImageHome from "../../images/homepageBackground.gif";
 
 const fadeInVariant = {
-  hidden: { opacity: 0, y: 30 }, 
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } }, 
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
 const Home = () => {
+  const theme = useTheme();
+  const navbarHeight = theme.mixins.toolbar.minHeight;
+
   return (
     <Box
       sx={{
-        minHeight: "100vh", 
+        minHeight: `calc(100vh - ${navbarHeight}px)`, 
         width: "100%",
         display: "flex",
         justifyContent: "center",
@@ -22,7 +25,8 @@ const Home = () => {
         backgroundImage: `url(${backgroundImageHome})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        padding: "5rem 1rem", 
+        padding: "5rem 1rem",
+        marginTop: `${navbarHeight}px`, 
       }}
     >
       <Container maxWidth="md">
@@ -30,10 +34,10 @@ const Home = () => {
           <Box
             sx={{
               bgcolor: "rgba(40, 40, 40, 0.85)",
-              p: { xs: 3, sm: 4 }, 
+              p: { xs: 3, sm: 4 },
               borderRadius: 2,
               maxWidth: "90%",
-              margin: "0 auto", 
+              margin: "0 auto",
             }}
           >
             <Typography
