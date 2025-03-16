@@ -6,7 +6,7 @@ import backgroundContact from "../../images/contactBackground.gif";
 
 const Contact = () => {
   const theme = useTheme();
-  const navbarHeight = theme.mixins.toolbar.minHeight;
+  const navbarHeight = theme.mixins.toolbar.minHeight || 64;
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -53,7 +53,7 @@ const Contact = () => {
         backgroundImage: `url(${backgroundContact})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        padding: "5rem 1rem",
+        padding: "0 1rem", 
         marginTop: `${navbarHeight}px`,
       }}
     >
@@ -74,6 +74,7 @@ const Contact = () => {
             justifyContent: "center",
             alignItems: "center",
             flexGrow: 1, 
+            height: "100%", 
           }}
         >
           <Typography variant="h4" fontWeight="bold" gutterBottom>
