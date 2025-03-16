@@ -41,7 +41,7 @@ const About = () => {
         </motion.div>
 
         <motion.div initial="hidden" animate="visible" variants={fadeInRightVariant}>
-          <Typography variant="body1" sx={{ lineHeight: 1.7, maxWidth: "75%", fontSize: 20, mx: "auto" }}>
+          <Typography variant="body1" sx={{textAlign: "centre", lineHeight: 1.7, maxWidth: "75%", wordWrap: "break-word", fontSize: 20, mx: "auto" }}>
             Hi, I'm Belal, a recent Computer Systems Engineering graduate from the University of Auckland.
             I have experience in embedded systems, front-end web development, and Python applications.
             Outside of tech, I'm passionate about anime, video games, and basketball.
