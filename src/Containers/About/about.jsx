@@ -15,7 +15,7 @@ const About = () => {
       sx={{
         display: "flex",
         width: "100%",
-        height: "100vh", // Full screen height
+        height: "100%", // Full screen height
         overflow: "hidden",
       }}
     >
@@ -24,6 +24,7 @@ const About = () => {
         elevation={3}
         sx={{
           width: "50%",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -78,6 +79,7 @@ const About = () => {
       <Box
         sx={{
           width: "50%",
+          height: "100%",
           position: "relative",
           backgroundImage: `url(${backgroundAbout})`,
           backgroundSize: "cover",
