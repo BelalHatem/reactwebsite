@@ -50,7 +50,7 @@ const Navbar = () => {
           
           <IconButton
             component="a"
-            href="https://github.com/BelalHateem"
+            href="https://github.com/BelalHatem"
             target="_blank"
             rel="noopener noreferrer"
             sx={socialIconStyle}
