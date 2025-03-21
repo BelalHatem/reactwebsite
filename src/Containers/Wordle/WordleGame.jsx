@@ -133,7 +133,15 @@ const WordleGame = () => {
           >
             {message}
           </Typography>
-          <Button variant="contained" color="#00deff" sx={{ mt: 2 }} onClick={restartGame}>
+          <Button 
+            variant="contained" 
+            sx={{ 
+              mt: 2, 
+              backgroundColor: "#FF5733", // Custom color
+              "&:hover": { backgroundColor: "#C70039" } // Custom hover effect
+            }} 
+            onClick={restartGame}
+          >
             Restart Game
           </Button>
         </>
