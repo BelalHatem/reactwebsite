@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/reactwebsite/static/js/main.69e5fe4e.js",
+    "main.js": "/reactwebsite/static/js/main.1bbd8ccc.js",
+    "static/media/aboutBackground.gif": "/reactwebsite/static/media/aboutBackground.3653f8111f343fc84f7b.gif",
     "static/media/homepageBackground.gif": "/reactwebsite/static/media/homepageBackground.17e528211233b9179743.gif",
     "static/media/contactBackground.gif": "/reactwebsite/static/media/contactBackground.e697ba626a88287238b1.gif",
+    "static/media/luffypng.png": "/reactwebsite/static/media/luffypng.66d14cc60cb6c755b796.png",
     "static/media/BELALNEWCV.pdf": "/reactwebsite/static/media/BELALNEWCV.cab28c3510d86c3e6efd.pdf",
-    "static/media/aboutBackground.gif": "/reactwebsite/static/media/aboutBackground.6f9c1f02500ff0828286.gif",
-    "static/media/cropped-running.gif": "/reactwebsite/static/media/cropped-running.fc265badece31833a428.gif",
     "index.html": "/reactwebsite/index.html",
-    "main.69e5fe4e.js.map": "/reactwebsite/static/js/main.69e5fe4e.js.map"
+    "main.1bbd8ccc.js.map": "/reactwebsite/static/js/main.1bbd8ccc.js.map"
   },
   "entrypoints": [
-    "static/js/main.69e5fe4e.js"
+    "static/js/main.1bbd8ccc.js"
   ]
 }
