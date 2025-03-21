@@ -1,7 +1,8 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box, Button, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Facebook, LinkedIn, GitHub } from "@mui/icons-material";
+import { LinkedIn, GitHub } from "@mui/icons-material";
+import logo from "../../images/luffypng.png";
 
 const Navbar = () => {
   return (
@@ -15,12 +16,18 @@ const Navbar = () => {
           py: 1.5,
         }}
       >
-        {/* Logo / Title */}
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
-          Belal's Portfolio
-        </Typography>
+        {/* Logo and Title on the left side */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          {/* Logo Image */}
+          <img src={logo} alt="Logo" style={{ height: 40 }} />
 
-        {/* Navigation Links */}
+          {/* Website Title */}
+          <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+            Belal's Portfolio
+          </Typography>
+        </Box>
+
+        {/* Navigation Links in the middle */}
         <Box sx={{ display: "flex", gap: 3 }}>
           <Button component={Link} to="/" sx={navLinkStyle}>
             Home
@@ -36,8 +43,9 @@ const Navbar = () => {
           </Button>
         </Box>
 
-        {/* Social Media Icons */}
+        {/* Social Media Icons on the right */}
         <Box sx={{ display: "flex", gap: 2 }}>
+          {/* LinkedIn Icon */}
           <IconButton
             component="a"
             href="https://www.linkedin.com/in/belalhatem"
@@ -47,7 +55,8 @@ const Navbar = () => {
           >
             <LinkedIn />
           </IconButton>
-          
+
+          {/* GitHub Icon */}
           <IconButton
             component="a"
             href="https://github.com/BelalHatem"
@@ -63,7 +72,7 @@ const Navbar = () => {
   );
 };
 
-/* Custom styles for buttons and social icons */
+// Style for navigation links
 const navLinkStyle = {
   color: "black",
   fontWeight: "bold",
@@ -73,6 +82,7 @@ const navLinkStyle = {
   },
 };
 
+// Style for social media icons
 const socialIconStyle = {
   color: "black",
   transition: "color 0.3s ease-in-out",
