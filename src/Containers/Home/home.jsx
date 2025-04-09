@@ -87,6 +87,7 @@ const Home = () => {
               color="success"
               href={cvFile}
               download="BELALNEWCV.pdf"
+              sx={{ marginTop: "15px"}}
             >
               Download CV
             </Button>
