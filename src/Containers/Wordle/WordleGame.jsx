@@ -186,7 +186,16 @@ const WordleGame = () => {
       )}
 
       {/* On-screen keyboard */}
-      <Box mt={4} sx={{ px: { xs: 1, sm: 2 }, overflowX: "hidden" }}>
+      <Box
+        mt={4}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 1,
+          px: 1,
+        }}
+      >
         {[
           ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
           ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
@@ -197,8 +206,9 @@ const WordleGame = () => {
             display="flex"
             justifyContent="center"
             flexWrap="wrap"
-            gap={0.5}
-            mb={1}
+            gap={0.8}
+            width="100%"
+            maxWidth="400px"
           >
             {row.map((key) => (
               <Button
@@ -206,19 +216,18 @@ const WordleGame = () => {
                 variant="contained"
                 onClick={() => handleLetterInput(key)}
                 sx={{
-                  minWidth:
-                    key === "ENTER" || key === "BACKSPACE"
-                      ? { xs: 48, sm: 60 }
-                      : { xs: 30, sm: 38, md: 42 },
-                  px: { xs: 0.5, sm: 1 },
-                  py: { xs: 0.7, sm: 1 },
-                  fontSize: { xs: "0.65rem", sm: "0.8rem", md: "0.9rem" },
+                  flex: key === "ENTER" || key === "BACKSPACE" ? "1.3" : "1",
+                  minWidth: 0,
+                  height: { xs: 40, sm: 48 },
+                  fontSize: { xs: "0.7rem", sm: "0.85rem" },
                   fontWeight: "bold",
                   backgroundColor: getKeyColor(key),
                   color: "black",
                   "&:hover": {
                     backgroundColor: getKeyColor(key),
                   },
+                  borderRadius: 1.5,
+                  px: 1.2,
                 }}
               >
                 {key === "BACKSPACE" ? "⌫" : key}
