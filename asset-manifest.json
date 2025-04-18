@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/reactwebsite/static/js/main.354511b4.js",
+    "main.js": "/reactwebsite/static/js/main.afa13953.js",
     "static/media/aboutBackground.gif": "/reactwebsite/static/media/aboutBackground.3653f8111f343fc84f7b.gif",
     "static/media/homepageBackground.gif": "/reactwebsite/static/media/homepageBackground.17e528211233b9179743.gif",
     "static/media/contactBackground.gif": "/reactwebsite/static/media/contactBackground.e697ba626a88287238b1.gif",
     "static/media/luffypng.png": "/reactwebsite/static/media/luffypng.66d14cc60cb6c755b796.png",
     "static/media/BELALNEWCV.pdf": "/reactwebsite/static/media/BELALNEWCV.cab28c3510d86c3e6efd.pdf",
     "index.html": "/reactwebsite/index.html",
-    "main.354511b4.js.map": "/reactwebsite/static/js/main.354511b4.js.map"
+    "main.afa13953.js.map": "/reactwebsite/static/js/main.afa13953.js.map"
   },
   "entrypoints": [
-    "static/js/main.354511b4.js"
+    "static/js/main.afa13953.js"
   ]
 }
