@@ -20,7 +20,6 @@ const About = () => {
         width: "100%",
         minHeight: `calc(100vh - ${navbarHeight}px)`,
         marginTop: `${navbarHeight}px`, // offset below navbar
-        overflowY: "auto",
       }}
     >
       <Box

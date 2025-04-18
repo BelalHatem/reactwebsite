@@ -18,7 +18,7 @@ function App() {
           display: "flex",
           flexDirection: "column",
           height: "100vh",
-          overflow: "hidden",
+          overflowy: "auto",
         }}
       >
         <Routes>
