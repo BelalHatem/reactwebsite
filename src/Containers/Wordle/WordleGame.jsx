@@ -186,24 +186,36 @@ const WordleGame = () => {
       )}
 
       {/* On-screen keyboard */}
-      <Box mt={4}>
+      <Box mt={4} sx={{ px: { xs: 1, sm: 2 }, overflowX: "hidden" }}>
         {[
           ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
           ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
           ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "BACKSPACE"],
         ].map((row, rowIndex) => (
-          <Box key={rowIndex} display="flex" justifyContent="center" mb={1}>
+          <Box
+            key={rowIndex}
+            display="flex"
+            justifyContent="center"
+            flexWrap="wrap"
+            gap={0.5}
+            mb={1}
+          >
             {row.map((key) => (
               <Button
                 key={key}
                 variant="contained"
                 onClick={() => handleLetterInput(key)}
                 sx={{
-                  minWidth: key === "ENTER" || key === "BACKSPACE" ? 60 : 40,
-                  mx: 0.5,
+                  minWidth:
+                    key === "ENTER" || key === "BACKSPACE"
+                      ? { xs: 48, sm: 60 }
+                      : { xs: 30, sm: 38, md: 42 },
+                  px: { xs: 0.5, sm: 1 },
+                  py: { xs: 0.7, sm: 1 },
+                  fontSize: { xs: "0.65rem", sm: "0.8rem", md: "0.9rem" },
+                  fontWeight: "bold",
                   backgroundColor: getKeyColor(key),
                   color: "black",
-                  fontWeight: "bold",
                   "&:hover": {
                     backgroundColor: getKeyColor(key),
                   },
@@ -215,6 +227,7 @@ const WordleGame = () => {
           </Box>
         ))}
       </Box>
+
     </Box>
   );
 };

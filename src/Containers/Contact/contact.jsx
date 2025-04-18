@@ -6,41 +6,37 @@ import backgroundContact from "../../images/contactBackground.gif";
 
 const Contact = () => {
   const theme = useTheme();
-  const navbarHeight = theme.mixins.toolbar.minHeight || 64; // Get navbar height (default to 64px if undefined)
+  const navbarHeight = theme.mixins.toolbar.minHeight || 64;
   const form = useRef();
-  const [loading, setLoading] = useState(false); // Indicates whether the form is submitting
-  const [error, setError] = useState(""); // Stores email validation error messages
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  // Function to validate email address format using regex
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  // Handles sending the email using EmailJS service
   const sendEmail = (e) => {
-    e.preventDefault(); // Prevent page reload
-    setError(""); // Clear previous errors
+    e.preventDefault();
+    setError("");
 
-    const formData = new FormData(form.current); // Get form data
-    const email = formData.get("from_email"); // Extract email field
+    const formData = new FormData(form.current);
+    const email = formData.get("from_email");
 
-    // Validate email before sending
     if (!validateEmail(email)) {
       setError("Please enter a valid email address.");
       return;
     }
 
-    setLoading(true); // Show loading state while sending
+    setLoading(true);
 
-    // EmailJS sendForm function to send the email
     emailjs
       .sendForm("service_lgyamo6", "template_j28omxl", form.current, "587bRM5kYgRY0MHa1")
       .then(
         () => {
-          alert("Message sent successfully!"); // Success feedback
-          e.target.reset(); // Reset form inputs
-          setLoading(false); // End loading state
+          alert("Message sent successfully!");
+          e.target.reset();
+          setLoading(false);
         },
         () => {
-          setError("Failed to send message. Please try again later."); // Show error
+          setError("Failed to send message. Please try again later.");
           setLoading(false);
         }
       );
@@ -50,66 +46,94 @@ const Contact = () => {
     <Box
       sx={{
         width: "100%",
-        minHeight: `calc(100vh - ${navbarHeight}px)`, // Full height minus navbar height
+        minHeight: `calc(100vh - ${navbarHeight}px)`,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: `url(${backgroundContact})`, // Background image for the contact section
+        backgroundImage: `url(${backgroundContact})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        padding: "0 1rem",
-        marginTop: `${navbarHeight}px`, // Push content below the fixed navbar
+        px: { xs: 2, sm: 4 },
+        py: { xs: 4, sm: 6 },
+        marginTop: `${navbarHeight}px`,
       }}
     >
-      {/* Slide-in animation wrapper for form */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        {/* Paper container for form with rounded corners and shadow */}
         <Paper
           elevation={3}
           sx={{
-            maxWidth: "500px", // Limit form width
+            maxWidth: { xs: "100%", sm: "500px" },
             width: "100%",
-            p: { xs: 3, sm: 4 }, // Responsive padding
+            p: { xs: 2, sm: 4 },
             borderRadius: 2,
             boxShadow: 3,
             textAlign: "center",
-            bgcolor: "rgba(255, 255, 255, 0.9)", // White semi-transparent background
-            margin: "0 auto",
+            bgcolor: "rgba(255, 255, 255, 0.9)",
+            mx: "auto",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            flexGrow: 1,
-            height: "100%",
           }}
         >
-          {/* Form Header */}
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            gutterBottom
+            sx={{
+              fontSize: {
+                xs: "1.5rem",
+                sm: "2rem",
+              },
+            }}
+          >
             Let's Connect!
           </Typography>
 
-          {/* Form Subheading */}
-          <Typography variant="body1" mb={3}>
+          <Typography
+            variant="body1"
+            mb={3}
+            sx={{
+              fontSize: {
+                xs: "0.95rem",
+                sm: "1rem",
+              },
+              maxWidth: "90%",
+            }}
+          >
             Send me a message below. Feel free to reach out with any questions!
           </Typography>
 
-          {/* Contact Form */}
           <form ref={form} onSubmit={sendEmail} style={{ width: "100%" }}>
-            {/* Name Field */}
-            <TextField fullWidth label="Your Name" name="from_name" required sx={{ mb: 2 }} />
+            <TextField
+              fullWidth
+              label="Your Name"
+              name="from_name"
+              required
+              sx={{ mb: 2 }}
+              inputProps={{ style: { fontSize: "1rem" } }}
+            />
 
-            {/* Email Field */}
-            <TextField fullWidth label="Your Email" name="from_email" required sx={{ mb: 2 }} />
+            <TextField
+              fullWidth
+              label="Your Email"
+              name="from_email"
+              required
+              sx={{ mb: 2 }}
+              inputProps={{ style: { fontSize: "1rem" } }}
+            />
 
-            {/* Error message display */}
-            {error && <Typography color="error">{error}</Typography>}
+            {error && (
+              <Typography color="error" sx={{ fontSize: "0.9rem", mb: 1 }}>
+                {error}
+              </Typography>
+            )}
 
-            {/* Message Textarea */}
             <TextField
               fullWidth
               label="Your Message"
@@ -118,10 +142,23 @@ const Contact = () => {
               rows={4}
               required
               sx={{ mb: 2 }}
+              inputProps={{ style: { fontSize: "1rem" } }}
             />
 
-            {/* Submit Button */}
-            <Button type="submit" variant="contained" color="primary" fullWidth disabled={loading}>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              disabled={loading}
+              sx={{
+                py: 1.5,
+                fontSize: {
+                  xs: "0.95rem",
+                  sm: "1rem",
+                },
+              }}
+            >
               {loading ? "Sending..." : "Send"}
             </Button>
           </form>
